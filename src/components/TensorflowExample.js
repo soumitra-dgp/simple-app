@@ -79,7 +79,7 @@ const TensorflowExample = () => {
 
     const handlePredict = () => {
         // Use the model to do inference on a data point the model hasn't seen before:
-        const predictedValue = modelState.model.predict(tf.tensor2d([modelState.valueToPredict], [1, 3])).arraySync()[0][0];
+        const predictedValue = modelState.model.predict(tf.tensor2d([modelState.valueToPredict], [1, 1])).arraySync()[0][0];
 
         setModelState({
             ...modelState,
